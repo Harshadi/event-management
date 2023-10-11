@@ -1,26 +1,48 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { connect, useDispatch } from "react-redux";
 import EventPage from "./components/EventPage";
-import { getChat } from "./services/getChat";
+import { getEvents } from "./services/getEvents";
 import "./styles.css";
+import { updateAction } from "./redux/action";
+import { SET_LOADING } from "./redux/actionTypes";
+import Error from "./helper/Error";
 
-export default function App() {
-  const [eventData, setEventData] = useState([]);
+function App() {
+  const dispatch = useDispatch();
 
   const getData = async () => {
-    await getChat()
-      .then((res) => setEventData(res))
-      .catch((err) => console.log(err));
+    await getEvents()
+      .then((res) => updateAction(null, null, [], res, [], dispatch))
+      .catch((err) => {
+        dispatch({
+          type: SET_LOADING,
+          payload: false
+        });
+        return <Error />;
+      });
   };
 
   useEffect(() => {
-    if (!eventData.length) {
-      getData();
-    }
+    dispatch({
+      type: SET_LOADING,
+      payload: true
+    });
+    getData();
   });
 
   return (
     <div className="App">
-      <EventPage eventData={eventData} />
+      <EventPage />
     </div>
   );
 }
+
+const mapStateToProps = ({}) => {
+  return {};
+};
+
+const mapDispatchToProps = {
+  updateAction
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

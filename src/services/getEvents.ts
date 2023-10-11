@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const getChat = async () => {
+export const getEvents = async () => {
   let retries = 3;
   while (retries) {
     return await axios
@@ -15,4 +15,5 @@ export const getChat = async () => {
         retries--;
       });
   }
+  return false;
 };

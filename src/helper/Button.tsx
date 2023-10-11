@@ -1,10 +1,15 @@
 import { IButton } from "../interfaces";
-import "./styles.css";
+import "../styles.css";
 
-export const Button = ({ text, notSelected, onClick }: IButton) => {
+const Button = ({ text, notSelected, onClick, disabled }: IButton) => {
   return (
-    <button onClick={onClick} className={notSelected ? "btnWhite" : "btnBlack"}>
+    <button
+      disabled={disabled}
+      onClick={onClick}
+      className={notSelected ? "btnWhite" : "btnBlack"}
+    >
       {text}
     </button>
   );
 };
+export default Button;

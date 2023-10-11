@@ -2,3 +2,143 @@
   font-family: sans-serif;
   text-align: center;
 }
+
+#myInput {
+  width: 80%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+
+.errorMsg {
+  width: 100%;
+}
+
+.subContainer {
+  margin-right: 10px;
+  width: 100%;
+}
+
+.withSelected {
+  width: 50%;
+  margin-right: 10px;
+}
+
+.subSelected {
+  width: 50%;
+}
+
+#myInput:focus {
+  outline: none;
+}
+.mainContainer {
+  display: flex;
+  margin-top: 15px;
+}
+.card {
+  display: flex;
+  align-items: center;
+  width: 200px;
+}
+
+.mainCard {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: 1px white solid;
+  border-radius: 15px;
+  box-shadow: 0.1px 5px 5px 2px #888888;
+  padding: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.mainCard:hover {
+  background: linear-gradient(to right, rgb(0, 201, 255), rgb(146, 254, 157));
+  transform: scale(1.2);
+  transition: transform 0.3s;
+}
+
+.eCategoryTitle {
+  font-size: "30px";
+  padding-right: 10px;
+}
+
+.mainDivider {
+  border-right: 1.5px ridge darkgrey;
+  margin-right: 15px;
+}
+
+.divider {
+  border-right: 2px black solid;
+  height: 35px;
+}
+
+.cardDetails {
+  padding-left: 10px;
+}
+
+.eName {
+  margin: 0px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.eCategory {
+  margin: 0px;
+  padding: 5px;
+}
+
+.eTime {
+  margin: 0px;
+  font-weight: 600;
+}
+
+.allCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.btnWhite {
+  background-color: #fff;
+  color: black;
+  border-radius: 8px;
+  width: 100%;
+  height: 30px;
+  margin-top: 10px;
+}
+.btnWhite:hover {
+  background: linear-gradient(to right, rgb(44, 62, 80), rgb(52, 152, 219));
+  color: white;
+  border-width: 0px;
+}
+
+.btnBlack {
+  background-color: #555555;
+  border-radius: 8px;
+  width: 100%;
+  height: 30px;
+  margin-top: 10px;
+  border-width: 0px;
+  color: white;
+}
+
+.btnBlack:hover {
+  background: linear-gradient(to right, rgb(211, 131, 18), rgb(168, 50, 121));
+  color: white;
+  font-weight: 600;
+}
+
+.btnBlackSort {
+  background-color: #000;
+  border-radius: 8px;
+  border-width: 0px;
+  width: 20%;
+  margin-right: 50px;
+  height: 30px;
+  margin-top: 10px;
+  color: white;
+}

@@ -4,6 +4,7 @@ export interface IButton {
   text: string;
   notSelected?: boolean;
   onClick?: MouseEventHandler;
+  disabled: boolean;
 }
 
 export interface ICard {
@@ -12,14 +13,20 @@ export interface ICard {
   onClickBtn: Function;
 }
 
-interface IEvent {
-  event_category: string;
-  event_name: string;
+export interface IEvent {
+  event_category?: string;
+  event_name?: string;
   start_time: string;
   end_time: string;
-  id: number;
+  id?: number;
+  selectedEvents?: Array<IEvent>;
+  events?: Array<IEvent>;
 }
 
 export interface IEventPage {
-  eventData: Array<IEvent>;
+  isSearched?: boolean;
+  allEvents?: Array<IEvent>;
+  filterData?: IEvent;
+  selectedEvents?: Array<IEvent>;
+  loading?: boolean;
 }

@@ -1,0 +1,4 @@
+export const SET_ALL_EVENTS = "SET_ALL_EVENTS";
+export const SET_FILTER_DATA = "SET_FILTER_DATA";
+export const SET_SELECTED_EVENTS = "SET_SELECTED_EVENTS";
+export const SET_LOADING = "SET_LOADING";
